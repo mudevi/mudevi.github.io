@@ -65,11 +65,9 @@ g {
 }
 .back {
 	@include transition(transform 3s ease-out, opacity 1s ease);
-	@include vendorize(transform, rotate(-60deg));
 }
 .backslow {
 	@include transition(transform 3.5s ease-out, opacity 1s ease);
-	@include vendorize(transform, rotate(-30deg));
 }
 #Layer1:hover { 
 	g {
