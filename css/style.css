@@ -243,7 +243,8 @@ button {
 }
 
 svg {
-  margin: 30px;
+  display: block;
+  margin: 30px auto;
   width: 400px;
   height: 400px;
   border-radius: 50%;
@@ -256,14 +257,6 @@ svg {
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   transition: transform 4s ease-in-out;
-}
-
-.foo {
-  background-color: #222;
-}
-
-.baz {
-  background-color: beige;
 }
 
 path {
@@ -285,7 +278,34 @@ path {
 
 g {
   transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 4s ease;
+  -moz-transition: -moz-transform 4s ease;
+  -o-transition: -o-transform 4s ease;
   transition: transform 4s ease;
+}
+
+.back {
+  -webkit-transition: -webkit-transform 3s ease-out, opacity 1s ease;
+  -moz-transition: -moz-transform 3s ease-out, opacity 1s ease;
+  -o-transition: -o-transform 3s ease-out, opacity 1s ease;
+  transition: transform 3s ease-out, opacity 1s ease;
+  -webkit-transform: rotate(-60deg);
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -o-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+
+.backslow {
+  -webkit-transition: -webkit-transform 3.5s ease-out, opacity 1s ease;
+  -moz-transition: -moz-transform 3.5s ease-out, opacity 1s ease;
+  -o-transition: -o-transform 3.5s ease-out, opacity 1s ease;
+  transition: transform 3.5s ease-out, opacity 1s ease;
+  -webkit-transform: rotate(-30deg);
+  -moz-transform: rotate(-30deg);
+  -ms-transform: rotate(-30deg);
+  -o-transform: rotate(-30deg);
+  transform: rotate(-30deg);
 }
 
 #Layer1:hover g {

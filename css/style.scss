@@ -29,22 +29,23 @@ button {
 	color: black;
 }
 svg {
-	margin: 30px;
+	display: block;
+	margin: 30px auto;
 	width: 400px;
 	height: 400px;
 	border-radius: 50%;
 	/*Hardware Acceleration*/
-	@include prefix(transform, rotate3d(0,0,0));
+	@include vendorize(transform, rotate3d(0,0,0));
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	transition: transform 4s ease-in-out;
 }
-.foo {
-	background-color: #222;
-}
-.baz {
-	background-color: beige;
-}
+// .foo {
+// 	background-color: #222;
+// }
+// .baz {
+// 	background-color: beige;
+// }
 path {
 	opacity: .8;
 	transition: fill 6s ease, opacity 6s ease;
@@ -60,12 +61,20 @@ path {
 }
 g {
 	transform-origin: 50% 50%;
-	transition: transform 4s ease;
+	@include transition(transform 4s ease);
+}
+.back {
+	@include transition(transform 3s ease-out, opacity 1s ease);
+	@include vendorize(transform, rotate(-60deg));
+}
+.backslow {
+	@include transition(transform 3.5s ease-out, opacity 1s ease);
+	@include vendorize(transform, rotate(-30deg));
 }
 #Layer1:hover { 
 	g {
-	@include prefix(transform, rotate3d(0,0,0));
-	@include prefix(transform, rotate(330deg));
+	@include vendorize(transform, rotate3d(0,0,0));
+	@include vendorize(transform, rotate(330deg));
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	}
@@ -96,9 +105,9 @@ g {
 	.st1{fill:#DD816C;}
 	.st0{fill:#449896;}
 	.back {
-		@include prefix(transform, rotate(-360deg));
+		@include vendorize(transform, rotate(-360deg));
 	}
 	.backSlow {
-		@include prefix(transform, rotate(-180deg));
+		@include vendorize(transform, rotate(-180deg));
 	}
 }
