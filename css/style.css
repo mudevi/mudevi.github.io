@@ -231,7 +231,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 body {
-  background-color: #000;
+  background-color: black;
+}
+
+.wrapper {
+  margin: 50px;
+  background-color: beige;
+  max-width: 1440px;
+  padding: 50px;
 }
 
 * {
@@ -243,6 +250,7 @@ button {
 }
 
 svg {
+  background-color: black;
   display: block;
   margin: 30px auto;
   width: 400px;

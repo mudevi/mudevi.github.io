@@ -20,8 +20,15 @@
 .st15{fill:#D3E5A3;}
 
 body {
-	background-color: #000;
+	background-color: black;
 }
+.wrapper {
+	margin: 50px;
+	background-color: beige;
+	max-width: 1440px;
+	padding: 50px;
+}
+
 * {
 	color: beige;
 }
@@ -29,6 +36,7 @@ button {
 	color: black;
 }
 svg {
+	background-color: black;
 	display: block;
 	margin: 30px auto;
 	width: 400px;
