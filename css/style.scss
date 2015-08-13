@@ -20,40 +20,88 @@
 .st15{fill:#D3E5A3;}
 
 body {
-	background-color: black;
+	background-color: hsl(300, 39%, 15%);
+	// position: relative;
+}
+header {
+	height: 120px;
+	background-color: hsl(300, 19%, 35%);
+	padding: 10px 50px 5px;
+	min-width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 999;
+	border-bottom: 10px solid hsl(300, 39%, 15%);
+}
+header h1, h2 {
+	color: beige;
+	font-family: "Overlock", sans-serif;
+	margin: 10px 0 0;
+	display: block;
+}
+header h1 {
+	font-size: 56px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	float: left;
+}
+header h2 {
+	font-size: 30px;
+	float: right;
+	margin-top: 35px;
+}
+h1 {
+	font-family: "Overlock", sans-serif;
+	color: hsl(300, 19%, 35%);
+	font-size: 40px;
+}
+hr {
+	border-bottom: 1px dotted color: hsl(300, 19%, 35%);
 }
 .wrapper {
 	margin: 50px;
+	margin-top: 200px;
 	background-color: beige;
 	max-width: 1440px;
 	padding: 50px;
-}
-
-* {
-	color: beige;
-}
-button {
-	color: black;
+	border-radius: 10px;
+	min-height: 900px;
+	z-index: 0;
 }
 svg {
 	background-color: black;
 	display: block;
-	margin: 30px auto;
-	width: 400px;
-	height: 400px;
+	margin: 30px;
+	width: 200px;
+	height: 200px;
 	border-radius: 50%;
+	float: left;
 	/*Hardware Acceleration*/
 	@include vendorize(transform, rotate3d(0,0,0));
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	transition: transform 4s ease-in-out;
 }
-// .foo {
-// 	background-color: #222;
-// }
-// .baz {
-// 	background-color: beige;
-// }
+footer {
+	font-family: Overlock, sans-serif;
+	font-size: 26px;
+	height: 150px;
+	background-color: hsl(300, 19%, 35%);
+	text-align: center;
+	overflow: hidden;
+	padding-top: 50px;
+		a i {
+			font-size: 30px;
+			color: beige;
+		}
+		p {
+			width: 125px;
+			margin: auto;
+			clear: both;
+			color: beige;
+			font-size: 12px;
+		}
+}
 path {
 	opacity: .8;
 	transition: fill 6s ease, opacity 6s ease;
@@ -77,10 +125,16 @@ g {
 .backslow {
 	@include transition(transform 3.5s ease-out, opacity 1s ease);
 }
+.st1 {
+	opacity: 0;
+}
+.st2 {
+	opacity: .5;
+}
 #Layer1:hover { 
 	g {
-	@include vendorize(transform, rotate3d(0,0,0));
-	@include vendorize(transform, rotate(330deg));
+	// @include vendorize(transform, rotate3d(0,0,0));
+	@include vendorize(transform, rotate(360deg));
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	}
@@ -115,5 +169,11 @@ g {
 	}
 	.backSlow {
 		@include vendorize(transform, rotate(-180deg));
+	}
+	g.revolve {
+		@include vendorize(transform, rotate3d(2,2,2));
+	}
+	.center {
+		opacity: 0;
 	}
 }
