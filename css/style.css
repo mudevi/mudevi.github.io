@@ -166,6 +166,14 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box;
 }
 
+.svg-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .st1 {
   fill: #406325;
 }
@@ -234,10 +242,25 @@ body {
   background-color: #351735;
 }
 
+h1 {
+  font-family: "Overlock", sans-serif;
+  color: #6a486a;
+  font-size: 40px;
+  border-bottom: 1px dashed #6a486a;
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-family: "Overlock", sans-serif;
+  color: #6a486a;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
 header {
-  height: 120px;
-  background-color: #6a486a;
-  padding: 10px 50px 5px;
+  height: 140px;
+  background-color: #351735;
+  padding: 30px 70px 5px;
   min-width: 100%;
   position: fixed;
   top: 0;
@@ -245,11 +268,12 @@ header {
   border-bottom: 10px solid #351735;
 }
 
-header h1, h2 {
+header h1, header h2 {
   color: beige;
   font-family: "Overlock", sans-serif;
   margin: 10px 0 0;
   display: block;
+  border-bottom: none;
 }
 
 header h1 {
@@ -265,10 +289,10 @@ header h2 {
   margin-top: 35px;
 }
 
-h1 {
-  font-family: "Overlock", sans-serif;
-  color: #6a486a;
-  font-size: 40px;
+img {
+  width: 25px;
+  margin: 5px;
+  margin-bottom: -5px;
 }
 
 .wrapper {
@@ -282,10 +306,39 @@ h1 {
   z-index: 0;
 }
 
+.svg-wrapper {
+  min-width: 100%;
+  margin-bottom: 100px;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-justify-items: space-between;
+  -moz-justify-items: space-between;
+  -ms-justify-items: space-between;
+  -o-justify-items: space-between;
+  justify-items: space-between;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+span {
+  float: right;
+}
+
 svg {
   background-color: black;
+  margin: 10px;
   display: block;
-  margin: 30px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -308,7 +361,7 @@ footer {
   background-color: #6a486a;
   text-align: center;
   overflow: hidden;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 footer a i {

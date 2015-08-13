@@ -23,21 +23,35 @@ body {
 	background-color: hsl(300, 39%, 15%);
 	// position: relative;
 }
+h1 {
+	font-family: "Overlock", sans-serif;
+	color: hsl(300, 19%, 35%);
+	font-size: 40px;
+	border-bottom: 1px dashed hsl(300, 19%, 35%);
+	padding-bottom: 10px;
+}
+h2 {
+	font-family: "Overlock", sans-serif;
+	color: hsl(300, 19%, 35%);
+	font-size: 28px;
+	padding-bottom: 10px;
+}
 header {
-	height: 120px;
-	background-color: hsl(300, 19%, 35%);
-	padding: 10px 50px 5px;
+	height: 140px;
+	background-color: hsl(300, 39%, 15%);
+	padding: 30px 70px 5px;
 	min-width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 999;
 	border-bottom: 10px solid hsl(300, 39%, 15%);
 }
-header h1, h2 {
+header h1, header h2 {
 	color: beige;
 	font-family: "Overlock", sans-serif;
 	margin: 10px 0 0;
 	display: block;
+	border-bottom: none;
 }
 header h1 {
 	font-size: 56px;
@@ -50,13 +64,10 @@ header h2 {
 	float: right;
 	margin-top: 35px;
 }
-h1 {
-	font-family: "Overlock", sans-serif;
-	color: hsl(300, 19%, 35%);
-	font-size: 40px;
-}
-hr {
-	border-bottom: 1px dotted color: hsl(300, 19%, 35%);
+img {
+	width: 25px;
+	margin: 5px;
+	margin-bottom: -5px;
 }
 .wrapper {
 	margin: 50px;
@@ -68,10 +79,22 @@ hr {
 	min-height: 900px;
 	z-index: 0;
 }
+.svg-wrapper {
+	min-width: 100%;
+	margin-bottom: 100px;
+	@extend %flexbox;
+	@include vendorize(justify-content, space-between);
+	@include vendorize(justify-items, space-between);
+	@include vendorize(flex-direction, row);
+	@include vendorize(flex-wrap, wrap);
+}
+span {
+	float: right;
+}
 svg {
 	background-color: black;
+	margin: 10px;
 	display: block;
-	margin: 30px;
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
@@ -89,7 +112,7 @@ footer {
 	background-color: hsl(300, 19%, 35%);
 	text-align: center;
 	overflow: hidden;
-	padding-top: 50px;
+	padding-top: 60px;
 		a i {
 			font-size: 30px;
 			color: beige;
