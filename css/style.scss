@@ -105,6 +105,12 @@ svg {
 	-webkit-perspective: 1000;
 	transition: transform 4s ease-in-out;
 }
+svg:hover,
+svg:active {
+	g, polygon {
+	@extend %hardwareAcc;
+	}
+}
 footer {
 	font-family: Overlock, sans-serif;
 	font-size: 26px;
